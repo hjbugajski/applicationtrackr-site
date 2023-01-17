@@ -1,0 +1,42 @@
+@use './mixins';
+@use './variables';
+
+h1 {
+  @include mixins.font-size(2rem);
+}
+
+h2 {
+  @include mixins.font-size(1.75rem);
+}
+
+h3 {
+  @include mixins.font-size(1.5rem);
+}
+
+a {
+  color: var(--color-blue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 16px;
+
+  a {
+    color: var(--color-contrast-canvas);
+    text-decoration: none;
+  }
+}
+
+p {
+  margin: 16px 0;
+}
+
+p,
+ul li {
+  color: var(--color-muted);
+  font-weight: variables.$font-weight-medium;
+}
