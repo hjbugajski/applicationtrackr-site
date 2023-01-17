@@ -1,0 +1,278 @@
+@use 'sass:map';
+@use './colors';
+@use './components';
+@use './mixins';
+@use './text';
+@use './variables';
+
+:root {
+  // base
+  --color-blue: #{colors.$light-blue-5};
+  --color-purple: #{colors.$light-purple-5};
+  --color-pink: #{colors.$light-pink-5};
+  --color-green: #{colors.$light-green-5};
+  --color-yellow: #{colors.$light-yellow-5};
+  --color-orange: #{colors.$light-orange-5};
+  --color-coral: #{colors.$light-coral-5};
+  --color-red: #{colors.$light-red-5};
+  --color-neutral: #{colors.$light-gray-9};
+  --color-muted: #{colors.$light-gray-6};
+  --color-border: #{colors.$light-gray-1};
+  --color-hover: #{colors.$light-gray-0};
+  --color-canvas: #{colors.$white};
+  --color-canvas-inset: #{colors.$light-gray-0};
+  --color-backdrop: rgb(255 255 255 / 60%);
+
+  // alpha
+  --color-alpha-blue: #{colors.$light-blue-5}0d;
+  --color-alpha-purple: #{colors.$light-purple-5}0d;
+  --color-alpha-pink: #{colors.$light-pink-5}0d;
+  --color-alpha-green: #{colors.$light-green-5}0d;
+  --color-alpha-yellow: #{colors.$light-yellow-5}0d;
+  --color-alpha-orange: #{colors.$light-orange-5}0d;
+  --color-alpha-coral: #{colors.$light-coral-5}0d;
+  --color-alpha-red: #{colors.$light-red-5}0d;
+  --color-alpha-neutral: #{colors.$light-gray-9}0d;
+  --color-alpha-muted: #{colors.$light-gray-6}0d;
+  --color-alpha-border: #{colors.$light-gray-1}0d;
+  --color-alpha-hover: #{colors.$light-gray-0}0d;
+  --color-alpha-canvas: #{colors.$white}0d;
+  --color-alpha-canvas-inset: #{colors.$light-gray-0}0d;
+
+  // gradient one
+  --color-gradient-one-blue: #{colors.$light-blue-3};
+  --color-gradient-one-purple: #{colors.$light-purple-3};
+  --color-gradient-one-pink: #{colors.$light-pink-3};
+  --color-gradient-one-green: #{colors.$light-green-3};
+  --color-gradient-one-yellow: #{colors.$light-yellow-3};
+  --color-gradient-one-orange: #{colors.$light-orange-3};
+  --color-gradient-one-coral: #{colors.$light-coral-3};
+  --color-gradient-one-red: #{colors.$light-red-3};
+  --color-gradient-one-neutral: #{colors.$light-gray-7};
+  --color-gradient-one-muted: #{colors.$light-gray-4};
+  --color-gradient-one-border: #{colors.$white};
+  --color-gradient-one-hover: #{colors.$white};
+  --color-gradient-one-canvas: #{colors.$white};
+  --color-gradient-one-canvas-inset: #{colors.$white};
+
+  // gradient three
+  --color-gradient-three-blue: #{colors.$light-blue-7};
+  --color-gradient-three-purple: #{colors.$light-purple-7};
+  --color-gradient-three-pink: #{colors.$light-pink-7};
+  --color-gradient-three-green: #{colors.$light-green-7};
+  --color-gradient-three-yellow: #{colors.$light-yellow-7};
+  --color-gradient-three-orange: #{colors.$light-orange-7};
+  --color-gradient-three-coral: #{colors.$light-coral-7};
+  --color-gradient-three-red: #{colors.$light-red-7};
+  --color-gradient-three-neutral: #{colors.$black};
+  --color-gradient-three-muted: #{colors.$light-gray-8};
+  --color-gradient-three-border: #{colors.$light-gray-3};
+  --color-gradient-three-hover: #{colors.$light-gray-2};
+  --color-gradient-three-canvas: #{colors.$light-gray-1};
+  --color-gradient-three-canvas-inset: #{colors.$light-gray-2};
+
+  // contrast
+  --color-contrast-blue: #{colors.$white};
+  --color-contrast-purple: #{colors.$white};
+  --color-contrast-pink: #{colors.$white};
+  --color-contrast-green: #{colors.$white};
+  --color-contrast-yellow: #{colors.$white};
+  --color-contrast-orange: #{colors.$white};
+  --color-contrast-coral: #{colors.$white};
+  --color-contrast-red: #{colors.$white};
+  --color-contrast-neutral: #{colors.$white};
+  --color-contrast-muted: #{colors.$white};
+  --color-contrast-border: #{colors.$light-gray-9};
+  --color-contrast-hover: #{colors.$light-gray-9};
+  --color-contrast-canvas: #{colors.$light-gray-9};
+  --color-contrast-canvas-inset: #{colors.$light-gray-9};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // base
+    --color-blue: #{colors.$dark-blue-3};
+    --color-purple: #{colors.$dark-purple-3};
+    --color-pink: #{colors.$dark-pink-3};
+    --color-green: #{colors.$dark-green-3};
+    --color-yellow: #{colors.$dark-yellow-3};
+    --color-orange: #{colors.$dark-orange-3};
+    --color-coral: #{colors.$dark-coral-3};
+    --color-red: #{colors.$dark-red-4};
+    --color-neutral: #{colors.$dark-gray-1};
+    --color-muted: #{colors.$dark-gray-3};
+    --color-border: #{colors.$dark-gray-8};
+    --color-hover: #{colors.$dark-gray-9};
+    --color-canvas: #{colors.$dark-gray-10};
+    --color-canvas-inset: #{colors.$dark-gray-9};
+    --color-backdrop: rgb(1 4 9 / 60%);
+
+    // alpha
+    --color-alpha-blue: #{colors.$dark-blue-3}0d;
+    --color-alpha-purple: #{colors.$dark-purple-3}0d;
+    --color-alpha-pink: #{colors.$dark-pink-3}0d;
+    --color-alpha-green: #{colors.$dark-green-3}0d;
+    --color-alpha-yellow: #{colors.$dark-yellow-3}0d;
+    --color-alpha-orange: #{colors.$dark-orange-3}0d;
+    --color-alpha-coral: #{colors.$dark-coral-3}0d;
+    --color-alpha-red: #{colors.$dark-red-4}0d;
+    --color-alpha-neutral: #{colors.$dark-gray-1}0d;
+    --color-alpha-muted: #{colors.$dark-gray-3}0d;
+    --color-alpha-border: #{colors.$dark-gray-8}0d;
+    --color-alpha-hover: #{colors.$dark-gray-9}0d;
+    --color-alpha-canvas: #{colors.$dark-gray-10}0d;
+    --color-alpha-canvas-inset: #{colors.$dark-gray-9}0d;
+
+    // gradient one
+    --color-gradient-one-blue: #{colors.$dark-blue-1};
+    --color-gradient-one-purple: #{colors.$dark-purple-1};
+    --color-gradient-one-pink: #{colors.$dark-pink-1};
+    --color-gradient-one-green: #{colors.$dark-green-1};
+    --color-gradient-one-yellow: #{colors.$dark-yellow-1};
+    --color-gradient-one-orange: #{colors.$dark-orange-1};
+    --color-gradient-one-coral: #{colors.$dark-coral-1};
+    --color-gradient-one-red: #{colors.$dark-red-2};
+    --color-gradient-one-neutral: #{colors.$dark-gray-0};
+    --color-gradient-one-muted: #{colors.$dark-gray-0};
+    --color-gradient-one-border: #{colors.$dark-gray-6};
+    --color-gradient-one-hover: #{colors.$dark-gray-7};
+    --color-gradient-one-canvas: #{colors.$dark-gray-7};
+    --color-gradient-one-canvas-inset: #{colors.$dark-gray-8};
+
+    // gradient three
+    --color-gradient-three-blue: #{colors.$dark-blue-5};
+    --color-gradient-three-purple: #{colors.$dark-purple-5};
+    --color-gradient-three-pink: #{colors.$dark-pink-5};
+    --color-gradient-three-green: #{colors.$dark-green-5};
+    --color-gradient-three-yellow: #{colors.$dark-yellow-5};
+    --color-gradient-three-orange: #{colors.$dark-orange-5};
+    --color-gradient-three-coral: #{colors.$dark-coral-5};
+    --color-gradient-three-red: #{colors.$dark-red-6};
+    --color-gradient-three-neutral: #{colors.$dark-gray-3};
+    --color-gradient-three-muted: #{colors.$dark-gray-7};
+    --color-gradient-three-border: #{colors.$dark-gray-10};
+    --color-gradient-three-hover: #{colors.$dark-gray-10};
+    --color-gradient-three-canvas: #{colors.$dark-gray-10};
+    --color-gradient-three-canvas-inset: #{colors.$black};
+
+    // contrast
+    --color-contrast-blue: #{colors.$black};
+    --color-contrast-purple: #{colors.$black};
+    --color-contrast-pink: #{colors.$black};
+    --color-contrast-green: #{colors.$black};
+    --color-contrast-yellow: #{colors.$black};
+    --color-contrast-orange: #{colors.$black};
+    --color-contrast-coral: #{colors.$black};
+    --color-contrast-red: #{colors.$black};
+    --color-contrast-neutral: #{colors.$black};
+    --color-contrast-muted: #{colors.$black};
+    --color-contrast-border: #{colors.$dark-gray-1};
+    --color-contrast-hover: #{colors.$dark-gray-1};
+    --color-contrast-canvas: #{colors.$dark-gray-1};
+    --color-contrast-canvas-inset: #{colors.$dark-gray-1};
+  }
+}
+
+*,
+*::before,
+*::after {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: variables.$font-family;
+  line-height: 1.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  color: var(--color-contrast-canvas);
+  background-color: var(--color-canvas);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+hr {
+  margin: 24px 0;
+  border: 1px solid var(--color-border);
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+#__nuxt,
+.app-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.at-column-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.at-max-width-900 {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.at-light-image {
+  display: none;
+
+  @media (prefers-color-scheme: light) {
+    display: block;
+  }
+}
+
+.at-dark-image {
+  display: none;
+
+  @media (prefers-color-scheme: dark) {
+    display: block;
+  }
+}
+
+@each $key in map-keys(colors.$at-palette-keys) {
+  .at-color-#{'' + $key} {
+    &.at-border {
+      border: 2px solid map.get(colors.$at-palette, $key);
+    }
+
+    &.at-text {
+      color: map.get(colors.$at-palette, $key) !important;
+    }
+
+    &.at-gradient-header {
+      $one: map.get(colors.$at-palette, gradient-one, $key);
+      $two: map.get(colors.$at-palette, $key);
+      $three: map.get(colors.$at-palette, gradient-three, $key);
+
+      @include mixins.gradient-header($one, $two, $three);
+
+      &.at-gradient-header--reverse {
+        @include mixins.gradient-header($one, $two, $three, $reverse: true);
+      }
+    }
+
+    &:not(.neutral).at-alpha-background {
+      background-color: map.get(colors.$at-palette, 'alpha', $key) !important;
+    }
+
+    &.neutral.at-alpha-background {
+      background-color: map.get(colors.$at-palette, canvas-inset) !important;
+    }
+  }
+}
+
+.at-background {
+  background-color: map.get(colors.$at-palette, canvas);
+}
+
+.at-alt-background {
+  background-color: map.get(colors.$at-palette, canvas-inset);
+}

@@ -1,0 +1,89 @@
+@use 'sass:map';
+@use '../colors';
+@use '../mixins';
+@use '../variables';
+
+.at-button {
+  @include mixins.font-size(14px);
+
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 40px;
+  padding: 0 16px;
+  color: var(--color-contrast-canvas);
+  font-weight: variables.$font-weight-semi-bold;
+  border: 2px solid transparent;
+  border-radius: variables.$border-radius;
+
+  &:hover {
+    background-color: var(--color-hover);
+  }
+
+  .material-symbols-rounded {
+    width: 20px;
+    height: 20px;
+    font-weight: variables.$font-weight-regular;
+    font-size: 20px;
+  }
+
+  @each $key in map-keys(colors.$at-palette-keys) {
+    &.at-color-#{'' + $key} {
+      color: map.get(colors.$at-palette, $key);
+    }
+
+    &.at-flat-button.at-color-#{'' + $key} {
+      color: map.get(colors.$at-palette, contrast, $key);
+      background-color: map.get(colors.$at-palette, $key);
+
+      &:hover {
+        opacity: 0.95;
+      }
+    }
+
+    &.at-outlined-button.at-color-#{'' + $key} {
+      color: map.get(colors.$at-palette, $key);
+      border-color: map.get(colors.$at-palette, $key);
+
+      &:hover {
+        background-color: map.get(colors.$at-palette, alpha, $key);
+      }
+    }
+  }
+}
+
+.at-button--large {
+  @include mixins.font-size(16px);
+
+  height: 48px;
+  padding: 0 20px;
+
+  .material-symbols-rounded {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+  }
+}
+
+.at-button--left-icon {
+  padding: 0 16px 0 12px;
+
+  &.at-button--large {
+    padding: 0 20px 0 16px;
+  }
+}
+
+.at-button--right-icon {
+  padding: 0 12px 0 16px;
+
+  &.at-button--large {
+    padding: 0 16px 0 20px;
+  }
+}
+
+.at-button--link {
+  text-decoration: none;
+}
