@@ -2,8 +2,7 @@
   "extends": [
     "stylelint-config-standard-scss",
     "stylelint-config-recommended-vue",
-    "stylelint-config-rational-order-fix",
-    "stylelint-config-prettier"
+    "stylelint-config-rational-order-fix"
   ],
   "overrides": [
     {
