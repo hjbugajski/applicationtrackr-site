@@ -6,8 +6,8 @@ class: at-column-container
 
 ::hero
 ---
-imageDark: applications--dark.png
-imageLight: applications--light.png
+imageDark: dashboard--dark.png
+imageLight: dashboard--light.png
 reverse: true
 ---
 #header
@@ -20,31 +20,29 @@ ApplicationTrackr helps you organize your ever growing list of job or internship
 ::feature
 ---
 backgroundClass: true
-color: purple
-imageDark: application-purple--dark.png
-imageLight: application-purple--light.png
+imageDark: application-panel--dark.png
+imageLight: application-panel--light.png
 ---
 
 #header
-Job information
+Application information
 
 #description
-Record basic information about the job with a link back to the application/job portal.
+Record information about the job with a link back to the application/job portal, and add offer details to easily compare offers, including a deadline and start date. The notes section allows for additional details to be recorded, if needed.
 ::
 
 ::feature
 ---
-color: green
-imageDark: application-green--dark.png
-imageLight: application-green--light.png
+imageDark: reorder-columns--dark.png
+imageLight: reorder-columns--light.png
 reverse: true
 ---
 
 #header
-Offer details
+Order columns
 
 #description
-Add offer details to easily compare offers, including a deadline and start date. The notes section allows for additional details to be recorded, if needed.
+Add, edit, and reorder columns to best suit your application workflow.
 ::
 
 ::feature
