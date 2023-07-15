@@ -12,7 +12,7 @@
   max-width: 1200px;
   margin: 64px auto;
 
-  @media (min-width: 600px) {
+  @media (width >= 600px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
   }

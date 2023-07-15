@@ -47,7 +47,7 @@ defineProps({
     margin-bottom: 0;
   }
 
-  @media (min-width: 768px) {
+  @media (width >= 768px) {
     padding: 64px 24px;
   }
 }
@@ -67,7 +67,7 @@ defineProps({
     border-radius: 10px;
   }
 
-  @media (min-width: 992px) {
+  @media (width >= 992px) {
     grid-template-columns: 1fr 675px;
     gap: 64px;
 

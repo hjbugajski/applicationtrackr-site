@@ -42,7 +42,7 @@ defineProps({
       margin-bottom: 0;
     }
 
-    @media (min-width: 600px) {
+    @media (width >= 600px) {
       flex-direction: row;
       align-items: center;
     }

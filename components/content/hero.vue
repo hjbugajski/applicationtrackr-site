@@ -67,7 +67,7 @@ defineProps({
     padding: 24px 24px 64px;
   }
 
-  @media (min-width: 768px) {
+  @media (width >= 768px) {
     padding: 64px 24px;
 
     &.at-hero--image {
@@ -98,7 +98,7 @@ defineProps({
     border-radius: 10px;
   }
 
-  @media (min-width: 768px) {
+  @media (width >= 768px) {
     transform: translateY(-112px);
   }
 }
