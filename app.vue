@@ -31,7 +31,10 @@
   background-color: var(--color-backdrop);
   border-bottom: 2px solid var(--color-border);
   backdrop-filter: saturate(180%) blur(20px);
-  transition-property: background-color, backdrop-filter, -webkit-backdrop-filter;
+  transition-property:
+    background-color,
+    backdrop-filter,
+    -webkit-backdrop-filter;
 }
 
 .nuxt-page-container {
@@ -40,7 +43,7 @@
   flex-direction: column;
   padding: 8px;
 
-  @media (min-width: 768px) {
+  @media (width >= 768px) {
     padding: 16px;
   }
 }
