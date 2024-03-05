@@ -39,7 +39,7 @@ reverse: true
 ---
 
 #header
-Order columns
+Custom columns
 
 #description
 Add, edit, and reorder columns to best suit your application workflow.
