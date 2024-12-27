@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="js" setup>
 defineProps({
   color: {
     type: String,
@@ -30,10 +30,21 @@ defineProps({
 <template>
   <section>
     <div
-      :class="['at-hero', 'at-alpha-background', `at-color-${color}`, type === 'image' ? 'at-hero--image' : undefined]"
+      :class="[
+        'at-hero',
+        'at-alpha-background',
+        `at-color-${color}`,
+        type === 'image' ? 'at-hero--image' : undefined
+      ]"
     >
       <div class="at-hero-text">
-        <h1 :class="['at-gradient-header', `at-color-${color}`, reverse ? 'at-gradient-header--reverse' : undefined]">
+        <h1
+          :class="[
+            'at-gradient-header',
+            `at-color-${color}`,
+            reverse ? 'at-gradient-header--reverse' : undefined
+          ]"
+        >
           <ContentSlot :use="$slots.header" unwrap="p" />
         </h1>
         <slot name="description" />
@@ -41,14 +52,26 @@ defineProps({
       <NuxtLink
         v-if="type === 'link'"
         :to="link.to"
-        :class="['at-button', 'at-flat-button', 'at-button--link', 'at-button--large', `at-color-${color}`]"
+        :class="[
+          'at-button',
+          'at-flat-button',
+          'at-button--link',
+          'at-button--large',
+          `at-color-${color}`
+        ]"
       >
         {{ link.text }}
       </NuxtLink>
     </div>
     <div v-if="type === 'image'" class="at-hero-center-image-container">
-      <img :src="'/images/' + imageDark" class="at-hero-center-image at-dark-image at-border at-color-border" />
-      <img :src="'/images/' + imageLight" class="at-hero-center-image at-light-image at-border at-color-border" />
+      <img
+        :src="'/images/' + imageDark"
+        class="at-hero-center-image at-dark-image at-border at-color-border"
+      />
+      <img
+        :src="'/images/' + imageLight"
+        class="at-hero-center-image at-light-image at-border at-color-border"
+      />
     </div>
   </section>
 </template>
@@ -60,7 +83,9 @@ defineProps({
   gap: 16px;
   align-items: center;
   justify-content: center;
+
   padding: 24px;
+
   border-radius: 24px;
 
   &.at-hero--image {
@@ -87,11 +112,12 @@ defineProps({
 }
 
 .at-hero-center-image-container {
+  transform: translateY(-64px);
+
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-  transform: translateY(-64px);
 
   .at-hero-center-image {
     width: 100%;

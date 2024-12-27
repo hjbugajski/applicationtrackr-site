@@ -29,6 +29,8 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   modules: ['@nuxt/content'],
-  css: ['@/assets/styles/index.scss']
+  css: ['@/assets/styles/index.scss'],
+  compatibilityDate: '2024-12-26'
 });

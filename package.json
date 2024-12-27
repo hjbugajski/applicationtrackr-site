@@ -5,25 +5,20 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "eslint": "eslint --ext .ts,.js,.vue . --ignore-path .gitignore",
     "stylelint": "stylelint '**/*.{scss,vue}' --ignore-path .gitignore",
-    "prettier": "prettier --write . --ignore-unknown",
-    "lint": "yarn eslint; yarn stylelint"
+    "prettier": "prettier --ignore-unknown --check . ",
+    "prettier:fix": "prettier --ignore-unknown --write ."
   },
-  "packageManager": "pnpm@9.7.1",
+  "packageManager": "pnpm@9.15.1",
   "devDependencies": {
-    "@nuxt/content": "^2.12.0",
-    "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "nuxt": "^3.13.1",
-    "postcss-html": "^1.6.0",
-    "prettier": "^3.2.5",
-    "sass": "^1.71.1",
-    "stylelint": "^16.2.1",
-    "stylelint-config-rational-order-fix": "^0.1.9",
-    "stylelint-config-recommended-vue": "^1.5.0",
-    "stylelint-config-standard-scss": "^13.0.0",
-    "typescript": "^5.3.3"
+    "@nuxt/content": "^2",
+    "nuxt": "^3",
+    "postcss-html": "^1",
+    "prettier": "^3",
+    "sass": "^1",
+    "stylelint": "^16",
+    "stylelint-config-clean-order": "^6",
+    "stylelint-config-recommended-vue": "^1",
+    "stylelint-config-standard-scss": "^14"
   }
 }

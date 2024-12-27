@@ -11,11 +11,14 @@
   gap: 6px;
   align-items: center;
   justify-content: center;
+
   width: fit-content;
   height: 40px;
   padding: 0 16px;
-  color: var(--color-contrast-canvas);
+
   font-weight: variables.$font-weight-semi-bold;
+  color: var(--color-contrast-canvas);
+
   border: 2px solid transparent;
   border-radius: variables.$border-radius;
 
@@ -26,11 +29,11 @@
   .material-symbols-rounded {
     width: 20px;
     height: 20px;
-    font-weight: variables.$font-weight-regular;
     font-size: 20px;
+    font-weight: variables.$font-weight-regular;
   }
 
-  @each $key in map-keys(colors.$at-palette-keys) {
+  @each $key in map.keys(colors.$at-palette-keys) {
     &.at-color-#{'' + $key} {
       color: map.get(colors.$at-palette, $key);
     }

@@ -177,12 +177,14 @@
 *::before,
 *::after {
   position: relative;
+
   box-sizing: border-box;
   margin: 0;
+
   font-family: variables.$font-family;
-  line-height: 1.25;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.25;
 }
 
 html,
@@ -237,7 +239,7 @@ hr {
   }
 }
 
-@each $key in map-keys(colors.$at-palette-keys) {
+@each $key in map.keys(colors.$at-palette-keys) {
   .at-color-#{'' + $key} {
     &.at-border {
       border: 2px solid map.get(colors.$at-palette, $key);
