@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="js" setup>
 defineProps({
   backgroundClass: {
     type: Boolean,
@@ -24,16 +24,34 @@ defineProps({
 </script>
 
 <template>
-  <section :class="['at-feature', `at-color-${color}`, backgroundClass ? 'at-alpha-background' : undefined]">
+  <section
+    :class="[
+      'at-feature',
+      `at-color-${color}`,
+      backgroundClass ? 'at-alpha-background' : undefined
+    ]"
+  >
     <div :class="['at-feature-inner-container', reverse ? 'at-feature-reverse' : undefined]">
       <div>
-        <h2 :class="['at-gradient-header', `at-color-${color}`, reverse ? 'at-gradient-header--reverse' : undefined]">
+        <h2
+          :class="[
+            'at-gradient-header',
+            `at-color-${color}`,
+            reverse ? 'at-gradient-header--reverse' : undefined
+          ]"
+        >
           <ContentSlot :use="$slots.header" unwrap="p" />
         </h2>
         <slot name="description" />
       </div>
-      <img :src="'/images/' + imageDark" class="at-feature-image at-dark-image at-border at-color-border" />
-      <img :src="'/images/' + imageLight" class="at-feature-image at-light-image at-border at-color-border" />
+      <img
+        :src="'/images/' + imageDark"
+        class="at-feature-image at-dark-image at-border at-color-border"
+      />
+      <img
+        :src="'/images/' + imageLight"
+        class="at-feature-image at-light-image at-border at-color-border"
+      />
     </div>
   </section>
 </template>
@@ -57,6 +75,7 @@ defineProps({
   gap: 24px;
   align-items: center;
   justify-content: center;
+
   max-width: 1200px;
   margin: 0 auto;
 

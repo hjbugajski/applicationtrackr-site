@@ -5,7 +5,9 @@
         <span class="material-symbols-rounded"> explore </span>
         ApplicationTrackr
       </NuxtLink>
-      <NuxtLink to="https://app.applicationtrackr.io/" class="at-button at-button--link"> Sign in </NuxtLink>
+      <NuxtLink to="https://app.applicationtrackr.io/" class="at-button at-button--link">
+        Sign in
+      </NuxtLink>
     </nav>
     <main class="nuxt-page-container">
       <NuxtPage />
@@ -19,18 +21,22 @@
 <style lang="scss">
 .at-toolbar {
   position: sticky;
-  top: 0;
   z-index: 2;
+  top: 0;
+
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
   width: 100%;
   height: 64px;
   padding: 0 8px;
+
   background-color: var(--color-backdrop);
-  border-bottom: 2px solid var(--color-border);
   backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 2px solid var(--color-border);
+
   transition-property:
     background-color,
     backdrop-filter,
@@ -53,9 +59,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   width: 100%;
   min-height: 64px;
   padding: 8px;
+
   background-color: var(--color-canvas);
   border-top: 2px solid var(--color-border);
 }

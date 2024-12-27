@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="js" setup>
 defineProps({
   color: {
     type: String,
@@ -14,8 +14,16 @@ defineProps({
 <template>
   <div class="at-additional-feature at-alt-background">
     <div class="at-additional-feature-title-container">
-      <div :class="['at-additional-feature-icon-container', 'at-alpha-background', `at-color-${color}`]">
-        <span :class="['material-symbols-rounded', 'at-text', `at-color-${color}`]">{{ icon }}</span>
+      <div
+        :class="[
+          'at-additional-feature-icon-container',
+          'at-alpha-background',
+          `at-color-${color}`
+        ]"
+      >
+        <span :class="['material-symbols-rounded', 'at-text', `at-color-${color}`]">{{
+          icon
+        }}</span>
       </div>
       <h3 :class="['at-text', `at-color-${color}`]">
         <ContentSlot :use="$slots.header" unwrap="p" />
@@ -51,8 +59,10 @@ defineProps({
   .at-additional-feature-icon-container {
     display: flex;
     align-items: center;
+
     width: fit-content;
     padding: 12px;
+
     border-radius: 12px;
   }
 

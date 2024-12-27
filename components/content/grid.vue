@@ -9,6 +9,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
+
   max-width: 1200px;
   margin: 64px auto;
 
