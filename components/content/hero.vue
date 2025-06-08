@@ -45,7 +45,7 @@ defineProps({
             reverse ? 'at-gradient-header--reverse' : undefined
           ]"
         >
-          <ContentSlot :use="$slots.header" unwrap="p" />
+          <slot name="header" mdc-unwrap="p" />
         </h1>
         <slot name="description" />
       </div>
@@ -85,7 +85,6 @@ defineProps({
   justify-content: center;
 
   padding: 24px;
-
   border-radius: 24px;
 
   &.at-hero--image {

@@ -26,11 +26,11 @@ defineProps({
         }}</span>
       </div>
       <h3 :class="['at-text', `at-color-${color}`]">
-        <ContentSlot :use="$slots.header" unwrap="p" />
+        <slot name="header" mdc-unwrap="p" />
       </h3>
     </div>
     <p class="at-text muted">
-      <ContentSlot :use="$slots.description" unwrap="p" />
+      <slot name="description" mdc-unwrap="p" />
     </p>
   </div>
 </template>
@@ -62,7 +62,6 @@ defineProps({
 
     width: fit-content;
     padding: 12px;
-
     border-radius: 12px;
   }
 

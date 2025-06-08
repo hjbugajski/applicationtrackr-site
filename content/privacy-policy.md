@@ -1,4 +1,6 @@
 ---
+title: Privacy Policy
+description: Privacy policy for ApplicationTrackr, detailing how we collect, use, and protect your personal information when using our job application tracking service.
 class: at-max-width-900
 ---
 
