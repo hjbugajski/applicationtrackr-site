@@ -4,6 +4,15 @@ description: ApplicationTrackr helps you organize your ever growing list of job 
 class: at-column-container
 ---
 
+::alert
+---
+backgroundClass: true
+color: purple
+---
+#description
+After 5+ years, **ApplicationTrackr is shutting down on September 1, 2025**. We are grateful for the support and usage of the platform over this time. All of your data is available for export in the application under "Settings > Account > Export data." If you do not export your data before the shutdown, it will be permanently deleted. Thank you for using ApplicationTrackr!
+::
+
 ::hero
 ---
 imageDark: dashboard--dark.png
