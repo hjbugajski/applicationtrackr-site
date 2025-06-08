@@ -32,10 +32,10 @@
   width: 100%;
   height: 64px;
   padding: 0 8px;
+  border-bottom: 2px solid var(--color-border);
 
   background-color: var(--color-backdrop);
   backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 2px solid var(--color-border);
 
   transition-property:
     background-color,
@@ -63,8 +63,8 @@
   width: 100%;
   min-height: 64px;
   padding: 8px;
+  border-top: 2px solid var(--color-border);
 
   background-color: var(--color-canvas);
-  border-top: 2px solid var(--color-border);
 }
 </style>

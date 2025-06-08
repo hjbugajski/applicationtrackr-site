@@ -85,7 +85,6 @@ defineProps({
   justify-content: center;
 
   padding: 24px;
-
   border-radius: 24px;
 
   &.at-hero--image {

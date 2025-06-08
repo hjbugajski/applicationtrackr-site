@@ -15,12 +15,11 @@
   width: fit-content;
   height: 40px;
   padding: 0 16px;
+  border: 2px solid transparent;
+  border-radius: variables.$border-radius;
 
   font-weight: variables.$font-weight-semi-bold;
   color: var(--color-contrast-canvas);
-
-  border: 2px solid transparent;
-  border-radius: variables.$border-radius;
 
   &:hover {
     background-color: var(--color-hover);
@@ -48,8 +47,8 @@
     }
 
     &.at-outlined-button.at-color-#{'' + $key} {
-      color: map.get(colors.$at-palette, $key);
       border-color: map.get(colors.$at-palette, $key);
+      color: map.get(colors.$at-palette, $key);
 
       &:hover {
         background-color: map.get(colors.$at-palette, alpha, $key);

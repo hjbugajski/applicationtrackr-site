@@ -62,7 +62,6 @@ defineProps({
 
     width: fit-content;
     padding: 12px;
-
     border-radius: 12px;
   }
 

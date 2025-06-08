@@ -6,6 +6,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "stylelint": "stylelint '**/*.{scss,vue}' --ignore-path .gitignore",
+    "stylelint:fix": "stylelint '**/*.{scss,vue}' --ignore-path .gitignore --fix",
     "prettier": "prettier --ignore-unknown --check . ",
     "prettier:fix": "prettier --ignore-unknown --write ."
   },
