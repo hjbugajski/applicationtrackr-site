@@ -40,7 +40,7 @@ defineProps({
             reverse ? 'at-gradient-header--reverse' : undefined
           ]"
         >
-          <ContentSlot :use="$slots.header" unwrap="p" />
+          <slot name="header" mdc-unwrap="p" />
         </h2>
         <slot name="description" />
       </div>
